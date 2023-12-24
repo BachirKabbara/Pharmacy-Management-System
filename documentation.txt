@@ -1,0 +1,65 @@
+Pharmacy Management System Documentation
+========================================
+
+Overview:
+---------
+The Pharmacy Management System is a Java-based application designed to simulate the workings of a pharmacy. It manages the inventory of medicines, including over-the-counter and prescription drugs, and allows for transactions such as selling and restocking medicines.
+
+Classes:
+--------
+1. Medicine:
+   - Description: Represents a generic medicine with attributes like name, composition, dose, price, and quantity.
+   - Attributes:
+     - String name: The name of the medicine.
+     - String composition: The composition of the medicine.
+     - int dose: The dosage in milligrams.
+     - double price: The price per unit.
+     - int quantity: The available quantity in stock.
+   - Methods: Constructors, getters, setters, toString, equals.
+
+2. OverTheCounter (extends Medicine):
+   - Description: Represents over-the-counter medicines with an additional attribute for minimum age.
+   - Additional Attribute:
+     - int minAge: The minimum age required to purchase the medicine.
+   - Methods: Constructors, setter and getter for minAge, and an overridden toString method.
+
+3. Prescription (extends Medicine):
+   - Description: Represents prescription medicines with an additional attribute for doctor specialization.
+   - Additional Attribute:
+     - String doctorSpecialization: The specialization of the doctor who prescribed the medicine.
+   - Methods: Constructors, setter and getter for doctorSpecialization, and an overridden toString method.
+
+4. Pharmacy:
+   - Description: Manages the inventory and operations of the pharmacy, including adding, searching, selling, and restocking medicines.
+   - Attributes: name, array of Medicines, counters for over-the-counter and prescription quantities, etc.
+   - Methods: Constructors, setters and getters, addMedicine, raisePrices, searchByName, searchByComposition, sellMedicine, restock, toString.
+
+5. OOP_Project (Main Class):
+   - Description: Contains the main method and provides a user interface for interacting with the pharmacy system.
+   - Functionality: Provides a menu-driven interface to interact with the Pharmacy class and perform operations like adding medicines, searching, selling, restocking, and displaying information.
+
+Usage:
+------
+1. Compiling and Running:
+   - Compile the Java files using `javac` and then run the `OOP_Project` class.
+   - Example commands:
+     ```
+     javac OOP_Project.java
+     java OOP_Project
+     ```
+
+2. Interacting with the System:
+   - Follow the prompts in the console to interact with the system.
+   - Choose the appropriate option from the menu to add medicines, search, sell, restock, and view information.
+
+Contributions:
+--------------
+- Contributions to this project are welcome! Please feel free to fork the repository, make your changes, and submit a pull request.
+
+Notes:
+------
+- This project is a basic representation and does not connect to a real database or handle real transactions.
+- Further development can include features like user authentication, database integration, and a graphical user interface.
+
+This documentation provides a basic outline of the Pharmacy Management System. For detailed usage and code documentation, refer to the comments within each Java file.
+
